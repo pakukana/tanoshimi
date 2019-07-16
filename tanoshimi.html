@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tanoshimi-Thai</title>
+    <link rel="stylesheet" type="text/css" href="xxx.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    
+    <style>
+        *{
+            box-sizing: border-box;
+            background-color: #333333
+        }
+        
+        .days{
+            display: flex;
+            justify-content: center;
+            font-family: 'Open Sans', sans-serif;
+            color: aliceblue;
+            font-size: 26px;
+        }
+        
+        p{
+        
+        }
+        
+        h3{
+            
+        }
+        
+    </style>
+</head>
+<body>
+
+    
+    
+    <div class="days">
+    <p>タイ到着まであと</p><h3 id="display"></h3><p>日</p>
+    </div>
+    
+
+    <script>
+//        const date = moment('2019-08-05 04:30:00');
+//        const timeY = moment(date.get('Y'));
+//        const timeM = moment(date.get('M'));
+//        const timeD = moment(date.get('D'));
+//        const timeH = moment(date.get('h'));
+//        const timeMM = moment(date.get('m'));
+//        
+//        const targetTime = timeY
+//+ `年` + timeM + `月` + timeD + `日` + timeH + `時` + timeMM + `分`; 
+//    
+//    document.getElementById('display').textContent = targetTime;
+//    
+//        
+//        
+//    const d = moment('2019-08-05');
+//    console.log(d.clone().set('year','2022').format('LLLL'));    
+//    console.log(d.get('year'))  
+        
+    const start = moment(new Date());
+    const arrival = moment('2019-08-05 04:30:00');
+    const nichi = arrival.diff(start, 'day');
+        
+    const msg = nichi;
+        
+    document.getElementById('display').textContent = msg;    
+        
+    </script>
+</body>
+</html>
